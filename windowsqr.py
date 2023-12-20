@@ -1,11 +1,15 @@
 import tkinter as tk
 import pyqrcode
 from tkinter import filedialog
+from PIL import Image
 
 def generate_qr_code():
     url = url_entry.get()
     qr = pyqrcode.create(url)
     qr.png('temp.png', scale=10)
+    qr_img = Image.open('temp.png')
+    qr_img = qr_img.resize((410, 410))
+    qr_img.save('temp.png')
     qr_img = tk.PhotoImage(file='temp.png')
     qr_label.config(image=qr_img)
     qr_label.image = qr_img
