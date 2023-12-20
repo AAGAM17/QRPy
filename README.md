@@ -25,6 +25,14 @@ pip install tkinter qrcode
 python main.py
 ```
 
+if There is an Error in running `main.py` file try `windowsqr.py` file
+
+4. Install Package
+```
+pip install pyqrcode
+```
+5. Run `windowsqr.py`
+
 ## Usage
 
 1. Enter the URL for which you want to generate a QR code in the input field.
